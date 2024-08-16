@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #726770a8;
+}
+/* Input container styles */
+#input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#todo-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-width: 400px;
+    text-align: center;
+}
+
+#new-todo {
+    width: 70%; 
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#add-todo {
+    width: 25%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#add-todo:hover {
+    background-color: #218838;
+}
+
+/* delete button styles */
+
+.delete {
+    background-color: #dc3545; /* Red background */
+    color: white;              /* White text */
+    border: none;              /* Remove the default border */
+    border-radius: 5px;        /* Rounded corners */
+    padding: 5px 10px;         /* Add some padding around the text */
+    margin-left: 5px;         /* Add some space to the left of the button */
+    cursor: pointer;           /* Change the cursor to pointer on hover */
+    font-size: 14px;           /* Adjust the font size */
+}
+
+.delete:hover {
+    background-color: #c82333; /* Darker red on hover */
+}    
+
+/*  edit button styles */
+
+.edit {
+    background-color: #007bff; /* Blue background */
+    color: white;              /* White text */
+    border: none;              /* Remove the default border */
+    border-radius: 5px;        /* Rounded corners */
+    padding: 5px 10px;         /* Add some padding around the text */
+    margin-left: 5px;         /* Add some space to the left of the button */
+    cursor: pointer;           /* Change the cursor to pointer on hover */
+    font-size: 14px;           /* Adjust the font size */
+}
+    
+
+.edit:hover {
+    background-color: #0069d9; /* Darker blue on hover */
+}
+
+#todo-list li {
+    display: flex;                /* Use Flexbox for layout */
+    justify-content: space-between; /* Space between the text and button */
+    align-items: center;          /* Vertically center the items */
+    padding: 5px 0;               /* Add some padding for spacing */
+}    
+
+#todo-list li .delete {
+    margin-left: 20px;            /* Ensure some space between text and button */
+    flex-shrink: 0;               /* Prevent button from shrinking */
+}    
+
