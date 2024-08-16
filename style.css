@@ -91,6 +91,18 @@ body {
     background-color: #0069d9; /* Darker blue on hover */
 }
 
+/* checkbox styles */
+
+.completed {
+    text-decoration: line-through; /* Strike through the text */
+    color: gray;                   /* Optional: Change color to gray */
+}
+
+.todo-checkbox {
+    margin-right: 10px; /* Add some space between the checkbox and the text */
+}
+
+
 #todo-list li {
     display: flex;                /* Use Flexbox for layout */
     justify-content: space-between; /* Space between the text and button */
