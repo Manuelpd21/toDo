@@ -1,2 +1,2 @@
 # toDo
-A basic TODO list application
+App básical para una lista de TODO
