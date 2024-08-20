@@ -34,7 +34,7 @@ function addTodo() {
     li.appendChild(textNode);
 
     const editButton = document.createElement('button');
-    editButton.textContent = 'Edit';
+    editButton.textContent = 'Editar';
     editButton.className = 'edit';
 
     // editar el texto del elemento
@@ -46,7 +46,7 @@ function addTodo() {
     };
 
     const deleteButton = document.createElement('button');
-    deleteButton.textContent = 'Delete';
+    deleteButton.textContent = 'Eliminar';
     deleteButton.className = 'delete';
 
     // agregar la funcionalidad para borrar el elemento
