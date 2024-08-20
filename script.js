@@ -1,25 +1,24 @@
-// Get references to the DOM elements
+
 const newTodoInput = document.getElementById('new-todo');
 const addTodoButton = document.getElementById('add-todo');
 const todoList = document.getElementById('todo-list');
 
 
-// Function to add a new todo item
 function addTodo() {
     const todoText = newTodoInput.value.trim();
     if (todoText === '') {
-        alert('Please enter a todo');
+        alert('Por favor ingresa un nuevo TODO');
         return;
     }
 
     const li = document.createElement('li');
 
-    // Create checkbox for marking as completed
+    // Crear el checkbox para marcar como completado
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.className = 'todo-checkbox';
 
-    // Add functionality to toggle completed state
+    // agregar la funcionalidad para cambiar el estado de completado
     checkbox.onchange = function() {
         if (checkbox.checked) {
             li.classList.add('completed');
@@ -30,7 +29,7 @@ function addTodo() {
 
     li.appendChild(checkbox);
 
-    // The rest of your code...
+    // otras funcionalidades
     const textNode = document.createTextNode(todoText);
     li.appendChild(textNode);
 
@@ -38,9 +37,9 @@ function addTodo() {
     editButton.textContent = 'Edit';
     editButton.className = 'edit';
 
-    // Add edit button functionality
+    // editar el texto del elemento
     editButton.onclick = function() {
-        const newTodoText = prompt('Enter new todo text');
+        const newTodoText = prompt('Ingresa un nuevo TODO');
         if (newTodoText) {
             textNode.textContent = newTodoText;
         }
@@ -50,9 +49,9 @@ function addTodo() {
     deleteButton.textContent = 'Delete';
     deleteButton.className = 'delete';
 
-    // Add delete button functionality
+    // agregar la funcionalidad para borrar el elemento
     deleteButton.onclick = function() {
-        const isConfirmed = confirm('Are you sure you want to delete this item from the list?');
+        const isConfirmed = confirm('¿Estas seguro de borrar este TODO?');
         if (isConfirmed) {
             todoList.removeChild(li);
         }
@@ -68,13 +67,8 @@ function addTodo() {
 
     newTodoInput.value = '';
 }
-
-
-
-// Add event listener to the "Add Todo" button
 addTodoButton.addEventListener('click', addTodo);
 
-// Optional: Add functionality to hit "Enter" to add todo
 newTodoInput.addEventListener('keypress', function(e) {
     if (e.key === 'Enter') {
         addTodo();
